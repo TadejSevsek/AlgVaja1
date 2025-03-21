@@ -63,6 +63,14 @@ int main(int argc, const char* argv[]) {
 			C[i] += C[i - 1];
 		}
 
+		int* B = new int[A.size()];
+
+
+		for (int j = A.size()-1; j > -1; j--) {
+			B[C[A[j]] - 1] = A[j];
+			C[A[j]]--;
+		}
+
 	}
 	else {
 		//Roman sort
