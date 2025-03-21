@@ -33,7 +33,18 @@ int main(int argc, const char* argv[]) {
 	if (!Branje_Stevil(A, argv[2])) return 0;
 
 	if (argv[1][0] == '0') {
-	        //Counting sort
+		int min = A[0];
+		for (int i = 0; i < A.size(); i++) {
+			if (A[i] < min) {
+				min = A[i];
+
+			}
+		}
+
+		for (int i = 0; i < A.size(); i++) {
+			A[i] -= min;	
+		}
+		max -= min;
 	}
 	else {
 		//Roman sort
